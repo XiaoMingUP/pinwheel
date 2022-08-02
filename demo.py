@@ -4,7 +4,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-
 class pinwheel(QWidget):
     def __init__(self):
         super().__init__()
@@ -16,8 +15,8 @@ class pinwheel(QWidget):
         self.timer = QTimer()
         # 设置窗口计时器
         self.timer.timeout.connect(self.update)
-        self.timer.start(10)
-        # self.timer.start(30)
+        self.timer.start(5)
+        # self.timer.start(20)
         # self.timer.start(50)
         self.k = 10
 
@@ -47,12 +46,6 @@ class pinwheel(QWidget):
         painter.drawLine(0, 0, 0, -100)
         painter.drawLine(0, 0, -100, 0)
         painter.drawLine(0, 0, 0, 100)
-
-
-
-
-
-
 
 if __name__ == '__main__':
     # 创建QApplication类的实例
